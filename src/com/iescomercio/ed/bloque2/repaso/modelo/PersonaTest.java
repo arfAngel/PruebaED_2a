@@ -33,4 +33,10 @@ class PersonaTest {
 		String real = p.getNombre();
 		assertEquals(esperado, real);
 	}
+	@Test
+	void testSetNombre() {
+		String esperado ="carlos";
+		p.setNombre(esperado);
+		assertEquals(esperado, p.getNombre());
+	}
 }
