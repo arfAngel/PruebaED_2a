@@ -15,4 +15,10 @@ class PersonaTest {
 		assertEquals(p, real);
 	}
 
+	@Test
+	void testGetDni() {
+		String esperado ="11111111L";
+		String real = p.getDni();
+		assertEquals(esperado, real);
+	}
 }
