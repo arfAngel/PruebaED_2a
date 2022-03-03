@@ -17,32 +17,43 @@ class PersonaTest {
 
 	@Test
 	void testGetDni() {
-		String esperado ="11111111L";
+		String esperado = "11111111L";
 		String real = p.getDni();
 		assertEquals(esperado, real);
 	}
+
 	@Test
 	void testSetDni() throws Exception {
-		String esperado ="22222222Z";
-		 p.setDni("22222222Z");
+		String esperado = "22222222Z";
+		p.setDni("22222222Z");
 		assertEquals(esperado, p.getDni());
 	}
+
 	@Test
 	void testGetNombre() {
-		String esperado ="angel";
+		String esperado = "angel";
 		String real = p.getNombre();
 		assertEquals(esperado, real);
 	}
+
 	@Test
 	void testSetNombre() {
-		String esperado ="carlos";
+		String esperado = "carlos";
 		p.setNombre(esperado);
 		assertEquals(esperado, p.getNombre());
 	}
+
 	@Test
 	void testGetApellido() {
-		String esperado ="ramirez";
+		String esperado = "ramirez";
 		String real = p.getApellido1();
 		assertEquals(esperado, real);
+	}
+
+	@Test
+	void testSetApellido() {
+		String esperado = "lopez";
+		p.setApellido1(esperado);
+		assertEquals(esperado, p.getApellido1());
 	}
 }
