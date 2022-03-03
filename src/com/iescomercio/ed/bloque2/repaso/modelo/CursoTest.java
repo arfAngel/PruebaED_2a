@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import clasesRepaso_bloque2.Curso;
+
 
 class CursoTest {
 
@@ -43,4 +45,9 @@ class CursoTest {
 		assertEquals(esperado, c.estaRegistrado(p.getDni()));
 	}
 
+	@Test
+	void testCurso() {
+		Curso esperado = new Curso();
+		assertEquals(esperado, c);
+	}
 }
