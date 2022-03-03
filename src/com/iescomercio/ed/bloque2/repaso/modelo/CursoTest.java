@@ -34,6 +34,13 @@ class CursoTest {
 
 		assertEquals(esperado, c.estaRegistrado(p.getDni()));
 	}
+	@Test
+	void testEstaRegistrado() {
+		c.aniadirAlumno(p);
+		boolean esperado = true;
+		c.aniadirAlumno(p);
 
+		assertEquals(esperado, c.estaRegistrado(p.getDni()));
+	}
 
 }
