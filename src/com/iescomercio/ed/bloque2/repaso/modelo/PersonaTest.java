@@ -21,4 +21,10 @@ class PersonaTest {
 		String real = p.getDni();
 		assertEquals(esperado, real);
 	}
+	@Test
+	void testSetDni() throws Exception {
+		String esperado ="22222222Z";
+		 p.setDni("22222222Z");
+		assertEquals(esperado, p.getDni());
+	}
 }
