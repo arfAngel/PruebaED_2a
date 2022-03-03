@@ -5,11 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import clasesRepaso_bloque2.Curso;
-
-
 class CursoTest {
-
 
 	Persona p = new Persona("11111111L", "angel", "ramirez");
 	Persona p1 = new Persona("11111111W", "manolo", "lopez");
@@ -28,6 +24,7 @@ class CursoTest {
 
 		assertEquals(esperado, c.estaRegistrado(p.getDni()));
 	}
+
 	@Test
 	void testAniadirAlumno() {
 		c.aniadirAlumno(p);
@@ -36,6 +33,7 @@ class CursoTest {
 
 		assertEquals(esperado, c.estaRegistrado(p.getDni()));
 	}
+
 	@Test
 	void testEstaRegistrado() {
 		c.aniadirAlumno(p);
@@ -49,5 +47,15 @@ class CursoTest {
 	void testCurso() {
 		Curso esperado = new Curso();
 		assertEquals(esperado, c);
+	}
+
+	@Test
+	void testNumeroAlumnos() {
+		c.aniadirAlumno(p);
+		c.aniadirAlumno(p1);
+		c.aniadirAlumno(p2);
+		c.aniadirAlumno(p3);
+		int esperado = 4;
+		assertEquals(esperado, c.numeroAlumnos());
 	}
 }
